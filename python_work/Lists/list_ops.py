@@ -31,3 +31,9 @@ print(popped_motorcycle)
 last_owned = motorcycles.pop()
 msg_motorcycle = f"The last motocycle I owned was a {last_owned.title()}"
 print(msg_motorcycle)
+
+
+too_expensive = "yamaha"
+motorcycles.remove(too_expensive)
+print(f"\nA {too_expensive.title()} is too expensive for me.")
+print(motorcycles)
