@@ -25,4 +25,9 @@ print(cars)
 print("****** POP() ******")
 print(motorcycles)
 popped_motorcycle = motorcycles.pop()
+print(motorcycles)
 print(popped_motorcycle)
+
+last_owned = motorcycles.pop()
+msg_motorcycle = f"The last motocycle I owned was a {last_owned.title()}"
+print(msg_motorcycle)
