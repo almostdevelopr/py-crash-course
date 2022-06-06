@@ -7,3 +7,5 @@ print(favourite_language.rstrip())
 
 # remove whitespace from both the sides
 print(favourite_language.strip())
+
+# In the real world, these stripping functions are used most often to clean up user input before it’s stored in a program.
