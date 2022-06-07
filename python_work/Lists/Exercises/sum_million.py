@@ -1,6 +1,3 @@
-from traceback import print_tb
-
-
 million_numbers = list(range(1, 1000001))
 print(f"Initial number: {min(million_numbers)}")
 print(f"Terminal number: {max(million_numbers)}")
