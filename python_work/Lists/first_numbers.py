@@ -16,4 +16,8 @@ for value in range(1, 11):
     # squares.append(square)
     squares.append(value**2)
 
-print(f"Squares: {squares}")
+print(f"Squares (FOR LOOP): {squares}")
+
+# list comprehension
+squares_comp = [value**2 for value in range(1, 11)]
+print(f"Squares (LIST COMPREHENSION): {squares_comp}")
