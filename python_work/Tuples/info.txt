@@ -1,0 +1,3 @@
+Sometimes you'll want to create a list of items that cannot change.
+Tuples allow you to do just that. Python refers to values that can-
+not change as immutable, and an immutable list is called a tuple.

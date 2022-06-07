@@ -21,3 +21,10 @@ cubes = [val**3 for val in range(1, 11)]
 print("Cubess--->>")
 for cube in cubes:
     print(cube)
+
+
+players = ["charles", "martina", "michael", "florence", "eli"]
+# print(players[:-4])
+print("Here are the first three players on my teams:")
+for player in players[-3:]:
+    print(f"Player name is {player.title()}")
