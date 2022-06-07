@@ -19,5 +19,5 @@ for value in range(1, 11):
 print(f"Squares (FOR LOOP): {squares}")
 
 # list comprehension
-squares_comp = [value**2 for value in range(1, 11)]
-print(f"Squares (LIST COMPREHENSION): {squares_comp}")
+squares_comp = [value**2 for value in range(1, 11) if value % 2 == 0]
+print(f"Even Squares (LIST COMPREHENSION): {squares_comp}")
