@@ -8,7 +8,7 @@ class Restaurant:
 
     def describe_restaurant(self):
         """Simulate to describe restaurant."""
-        print(f"The name of the restaurant is {self._restaurant_name.title()}")
+        print(f"\nThe name of the restaurant is {self._restaurant_name.title()}")
         print(f"The famous cuisine of the restaurant is {self._cuising_type.title()}")
 
     def open_restaurant(self):
@@ -17,7 +17,14 @@ class Restaurant:
 
 
 # instantiate
-restaurant = Restaurant("raddison blu", "indian")
+restaurant_0 = Restaurant("raddison blu", "indian")
+restaurant_1 = Restaurant("hyat", "italian")
+restaurant_2 = Restaurant("club mahindra", "continental")
 
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
+# 1
+restaurant_0.describe_restaurant()
+restaurant_0.open_restaurant()
+# 2
+restaurant_1.describe_restaurant()
+# 3
+restaurant_2.describe_restaurant()
