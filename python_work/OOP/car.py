@@ -32,6 +32,32 @@ class Car:
         else:
             print("You cannot add negative miles to roll back an odometer.")
 
+    def fill_gas_tank(self):
+        """Inform the driver to fill the gas tank."""
+        print("Please fill the gas tank.")
+
+
+class ElectricCar(Car):
+    """Represents aspects of a car, specific to electric vehicles."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes of parent class.
+        Then initialize attributes specific to an electric car."""
+        super().__init__(make, model, year)
+        self._batter_size = 75
+
+    def describe_battery(self):
+        """Print a statement describing the battery size of the car."""
+        print(f"This car has a {self._batter_size}-kWh battery.")
+
+    def fill_gas_tank(self):
+        """Electric cars don't have gas tanks."""
+        print("This car does not need gas tank.")
+
+
+my_tesla = ElectricCar("tesla", "model s", 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
 
 my_new_car = Car("audi", "a4", "2019")
 print(my_new_car.get_descriptive_name())
