@@ -43,10 +43,24 @@ class Battery:
     def __init__(self, battery_size=75):
         """Initialize battery's attribute."""
         self._battery_size = battery_size
+        self._range = 0
 
     def describe_battery(self):
         """Print a statement describing the battery size of the car."""
         print(f"This car has a {self._battery_size}-kWh battery.")
+
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self._battery_size == 75:
+            self._range = 260
+        elif self._battery_size == 100:
+            self._range = 315
+        print(f"This can go about {self._range} miles on a full charge.")
+
+    def upgrade_battery(self):
+        """Add extra capacity to the battery of a car."""
+        if self._battery_size == 75:
+            self._battery_size += 25
 
 
 class ElectricCar(Car):
@@ -56,7 +70,7 @@ class ElectricCar(Car):
         """Initialize attributes of parent class.
         Then initialize attributes specific to an electric car."""
         super().__init__(make, model, year)
-        self.battery = Battery(89)
+        self.battery = Battery()
 
     # def describe_battery(self):
     #     """Print a statement describing the battery size of the car."""
@@ -70,6 +84,10 @@ class ElectricCar(Car):
 my_tesla = ElectricCar("tesla", "model s", 2019)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+print("...After battery upgrade...")
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.get_range()
 
 my_new_car = Car("audi", "a4", "2019")
 print(my_new_car.get_descriptive_name())
